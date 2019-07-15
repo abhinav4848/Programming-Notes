@@ -4,11 +4,11 @@
 ## 4.1 Listing Files
 `ls --help`
 
-. is the current directory
+`.` is the current directory
 
-.. is the directory that's above
+`..` is the directory that's above
 
-`ls -a` (includes (dot) files). The dot files are usually configuration files. As well as include the current firectory(.) and above directory(..)
+`ls -a` (includes (dot) files). The dot files are usually configuration files. As well as include the current firectory `.` and above directory `..`
 
 `ls -la` also includes creation date and more.
 
@@ -89,7 +89,7 @@ Everytime you begin a path with /, it's absolute path so wherever you are, if yo
 ## 4.5 Path Variable 
 Its tells where the system should look for programs/executables.
 `echo $PATH` (it looks in one of these directories)
-Listing is separated by colons(:) here.
+Listing is separated by colons `:` here.
 
 ### There are two types commands here.
 One is the inbuilt function of the shell which works whatever the path is.
