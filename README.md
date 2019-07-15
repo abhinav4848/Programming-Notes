@@ -71,8 +71,8 @@
 -   [VS Code](./topics/vscode.md)
 
 # Linux
--   [file management](.\topics\Linux_File_Management.md)
--   [system management](.\topics\Linux_System_Management.md)
+-   [file management](./topics/Linux_File_Management.md)
+-   [system management](./topics/Linux_System_Management.md)
 
 ### Administration
 
