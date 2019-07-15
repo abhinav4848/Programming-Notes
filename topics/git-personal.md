@@ -4,8 +4,9 @@
 `$ git status (verbose version)`
 
 # Staging (aka Index)
-`$ git add README.md # stages README.md
-$ git add . # stages all files`
+`$ git add README.md # stages README.md`
+
+`$ git add . # stages all files`
 
 `$ git status -s  # (compressed version)`
 ```
@@ -30,20 +31,21 @@ So for example in that output,
 * Rakefile was modified, staged and then modified again, so there are changes to it that are both staged and unstaged.
 
 # Ignoring Files
-https://github.com/github/gitignore
-http://gitignore.io
+* [Github repo](https://github.com/github/gitignore)
+* [Gitignore.io](http://gitignore.io)
 
+**Usage**
 1. Blank lines or lines starting with # are ignored.
 2. Standard glob patterns work, and will be applied recursively throughout the entire working tree.
 3. You can start patterns with a forward slash `/` to avoid recursivity.
 4. You can end patterns with a forward slash `/` to specify a directory.
 5. You can negate a pattern by starting it with an exclamation point `!`.
 6. Glob patterns are like simplified regular expressions that shells use. 
-7. An asterisk (*) matches zero or more characters; 
-8. [abc] matches any character inside the brackets (in this case a, b, or c); 
-9. a question mark (?) matches a single character;
+7. An asterisk `*` matches zero or more characters; 
+8. `[abc]` matches any character inside the brackets (in this case a, b, or c); 
+9. a question mark `?` matches a single character;
 10. brackets enclosing characters separated by a hyphen ([0-9]) matches any character between them (in this case 0 through 9). 
-11. You can also use two asterisks to match nested directories;  a/**/z would match a/z, a/b/z, a/b/c/z, and so on.
+11. You can also use two asterisks to match nested directories;  `a/**/z` would match a/z, a/b/z, a/b/c/z, and so on.
 
 ## Example 
 * ignore all .a files: `*.a`
@@ -75,7 +77,7 @@ Keep the file in your working tree but remove it from your staging area. In othe
 
 You can pass files, directories, and file-glob patterns to the git rm command. That means you can do things such as:
 `$ git rm log/\*.log`
-Note the backslash (\) in front of the *.
+Note the backslash `\` in front of the `*`.
 This is necessary because Git does its own filename expansion in addition to your shell’s filename expansion. This command removes all files that have the .log extension in the log/ directory. Or, you can do something like this:
 `$ git rm \*~`
 This command removes all files whose names end with a ~.
@@ -142,7 +144,7 @@ Useful options for git log --pretty=format
 "Fast Forwarding" occurs when the trunk can automatically move ahead to the branch without any merge conflicts because they are in the same path of development.
 `$ git branch -d hotfix` # delete "hotfix" branch now that it's merged to "master"
 
-*From the book: It’s worth noting here that the work you did in your hotfix branch is not contained in the files in your iss53 branch (which diverged from master before hotfix was merged into master). If you need to pull it in, you can merge your master branch into your iss53 branch by running git merge master, or you can wait to integrate those changes until you decide to pull the iss53 branch back into master later.*
+*From the book:* It’s worth noting here that the work you did in your hotfix branch is not contained in the files in your iss53 branch (which diverged from master before hotfix was merged into master). If you need to pull it in, you can merge your master branch into your iss53 branch by running git merge master, or you can wait to integrate those changes until you decide to pull the iss53 branch back into master later.
 
 # Merge Conflict
 `$ git status` # after a merge conflict occurs, type this to see which files are pending merger due to conflict.
