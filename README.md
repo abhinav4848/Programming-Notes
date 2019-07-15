@@ -71,6 +71,7 @@
 ### IDE
 
 -   [VS Code](./topics/vscode.md)
+-   [Python, gitignore](./topics/vscode-python-gitignore.md)
 
 # Linux
 -   [file management](./topics/Linux_File_Management.md)

@@ -138,7 +138,7 @@ The thing to remember is you don't have to call your remote "origin". It's just 
     $ git push MyDevGitHubRepo master
     $ git push MyProdBitBucketRepo master
 
-##Dealing with Repos on a Server
+## Dealing with Repos on a Server
 Let's say that you have two computers you work at. Computer A and Computer B. Both are editing the same codebase stored on Github (or Gitlab, or even a personal server). If computer A makes a change and pushes it to the server, I believe your question is "How does computer B know about the change that now exists on the server?" The answer is that computer B needs to do a `git fetch` to get the latest changes. After doing a `git fetch` you will see how far "behind" your code is from the github repo you are linked to.
 
 So you find out the code has changed and your code is behind. What do you do in this situation? Well, before you are allowed to `git push` your code to the server, you need to get the latest code changes and merge them into your local branch. You do this by first getting the latest changes (`git fetch` as explained previously) and then by doing a `git merge` and finally resolving conflicts as usual. Only then can you do a `git push` of your changes.
