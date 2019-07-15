@@ -35,6 +35,8 @@
 ### Version Control
 
 -   [Git](./topics/git.md)
+
+#### Own
 -   [Git personal](./topics/git-personal.md)
 -   [Git Samort7's basics](./topics/git-samort7.md)
 
@@ -71,9 +73,11 @@
 ### IDE
 
 -   [VS Code](./topics/vscode.md)
+#### Own
 -   [Python, gitignore](./topics/vscode-python-gitignore.md)
 
 # Linux
+### Own Notes
 -   [file management](./topics/Linux_File_Management.md)
 -   [system management](./topics/Linux_System_Management.md)
 

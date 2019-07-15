@@ -44,7 +44,7 @@ So for example in that output,
 7. An asterisk `*` matches zero or more characters; 
 8. `[abc]` matches any character inside the brackets (in this case a, b, or c); 
 9. a question mark `?` matches a single character;
-10. brackets enclosing characters separated by a hyphen ([0-9]) matches any character between them (in this case 0 through 9). 
+10. brackets enclosing characters separated by a hyphen `[0-9]` matches any character between them (in this case 0 through 9). 
 11. You can also use two asterisks to match nested directories;  `a/**/z` would match a/z, a/b/z, a/b/c/z, and so on.
 
 ## Example 
@@ -86,17 +86,17 @@ This command removes all files whose names end with a ~.
 `$ git mv file_from file_to` # summary function for "mv", then "rm", then "add"
 
 # View Commit History
-`$ git log`
-`-2` # shows last 2 commits
-`--stat` # shows more detail with each commit
-`--graph`
-`--since=2.weeks` # Commits since past 2 weeks
-`--until=1.weeks`
-`--relative-date` # Display the date in a relative format (for example, “2 weeks ago”) instead of using the full date format.
-`--pretty=oneline`
-`--pretty=format:"%h - %an, %ar : %s"`
+* `$ git log`
+* `-2` # shows last 2 commits
+* `--stat` # shows more detail with each commit
+* `--graph`
+  * `--since=2.weeks` # Commits since past 2 weeks
+  * `--until=1.weeks`
+  * `--relative-date` # Display the date in a relative format (for example, “2 weeks ago”) instead of using the full date format.
+  * `--pretty=oneline`
+  * `--pretty=format:"%h - %an, %ar : %s"`
 
-Useful options for git log --pretty=format
+**Useful options for `git log --pretty=format`**
 
 | Option | Description of Output                           |
 | ---    | ---                                             |
