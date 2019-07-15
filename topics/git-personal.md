@@ -35,9 +35,9 @@ http://gitignore.io
 
 1. Blank lines or lines starting with # are ignored.
 2. Standard glob patterns work, and will be applied recursively throughout the entire working tree.
-3. You can start patterns with a forward slash (/) to avoid recursivity.
-4. You can end patterns with a forward slash (/) to specify a directory.
-5. You can negate a pattern by starting it with an exclamation point (!).
+3. You can start patterns with a forward slash `/` to avoid recursivity.
+4. You can end patterns with a forward slash `/` to specify a directory.
+5. You can negate a pattern by starting it with an exclamation point `!`.
 6. Glob patterns are like simplified regular expressions that shells use. 
 7. An asterisk (*) matches zero or more characters; 
 8. [abc] matches any character inside the brackets (in this case a, b, or c); 
