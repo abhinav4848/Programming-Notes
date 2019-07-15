@@ -35,6 +35,8 @@
 ### Version Control
 
 -   [Git](./topics/git.md)
+-   [Git personal](./topics/git-personal.md)
+-   [Git Samort7's basics](./topics/git-samort7.md)
 
 ### Tooling
 
