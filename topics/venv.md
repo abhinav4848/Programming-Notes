@@ -36,9 +36,13 @@ You **do not** put any of your project files inside *venv*. Your project files a
 You'll also see `(venv)` at the start of every command line as long as virtual environment is active.
 
 ## Handling Packages
-`pip list` only lists packages installed in this environment
+`pip list` only lists packages installed in this environment.
+
 `pip install requests` installs *requests* in the virtual environment.
+
 `pip freeze` gives a list of these packages which you can copy and paste into project folder in a **requirements.txt** file. The list may be longer than what you installed, cuz even dependencies of packages are installed when you install *requests*.
+
+You could also redirect the output of pip freeze using `pip freeze > requirements.txt`.
 
 `pip list --local` for only local packages installed in this venv. Same logic for `pip freeze --local`.
 
