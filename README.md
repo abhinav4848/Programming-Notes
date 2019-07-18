@@ -2,7 +2,7 @@
 
 ## Python
 -   [The definitive guide to Python Imports](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
--   [venv](./topics/venv.md)
+-   [Venv](./topics/venv.md)
 
 ## Version Control
 
