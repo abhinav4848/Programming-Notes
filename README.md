@@ -23,3 +23,5 @@ website.com: query
 query 2017..2018
 filetype:pdf query
 ```
+
+Thanx to 8483.
