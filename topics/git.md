@@ -178,7 +178,10 @@ $ git diff --staged
 $ git diff --cached
 
 # Show differences between current and specific commit
-git diff HASH
+git diff <sha-1>
+
+# diff between 2 hashes
+git diff <sha-1> <sha-1>
 ```
 
 ## Tree
@@ -206,9 +209,12 @@ $ git commit -m "Add your commit message inline"
 # Skip staging. Direct commiting. i.e. Includes all currently changed files into this commit. Untracked (new) files are not included.
 $ git commit -a
 
-# to improve upon the last commit, like overwriting it. It overwrites the commit message as well as commit Hash
+# to improve upon the last commit, like overwriting it. It overwrites the commit message as well as commit Hash. i.e. It changes the commit history.
+# Bad idea if you push and others have pulled it.
+# So git revert is better for multiple people collaborating.
 $ git commit --amend -m "Add your new commit message"
 ```
+
 If the `-m` is ommited, the screen will move to the `vi` text editor, which can be exited with `:q`.
 
 # Tagging
@@ -246,29 +252,70 @@ git reset HEAD <file>
 ```bash
 # Revert a file to the last commit version.
 # discard changes in working directory and restore older copy of the file from index. Otherwise last commit
-git checkout -- FILENAME
+git checkout <filename>
 
 # discard entire working directory and restore older files from the index, otherwise last commit
 git checkout .
 ```
 
+## Moving commit from one branch to another
+Useful if you accidentally commit to the wrong branch. So 2 things:
+1. You need to copy the commit to actual branch
+2. You need to undo the commit from current branch
+
+```bash
+# get the hash of the commit you want to copy elsewhere
+git log
+
+# checkout the actual branch
+git checkout actual-branch
+
+# git cherry-pick duplicates the commit into this branch
+git cherry-pick <sha-1>
+```
+
 ## Uncommiting
 ```bash
-# UNDO commit and move everything back to staging. The carrot on the HEAD means move to the previous commit.
-git reset --soft HEAD^
+# UNDO commit and move everything back to staging. The carrot on the HEAD means move to the previous commit. 
+git reset --soft <sha-1>|HEAD^
 
-# DELETE the last 2 commits.
-git reset --HARD HEAD^^
+# mixed reset is default option. 
+# This UNDOes commit and moves everything back to WORKING DIRECTORY
+git reset <sha-1>
 
 # DELETE everything after the specified commit.
-git reset --HARD HASH
+# it reverts all the tracked files to the state they were
+# but leaves untracked files alone
+git reset --hard <sha-1>
+
+# HEAD^^ means DELETE the last 2 commits. 
+# i.e. it undoes the commit and makes everything look like the specified commit.
+git reset --hard HEAD^^
+
+# get rid of untracked files
+# d: rid of untracked directories
+# f: force
+git clean -df
+```
+
+## Undo Git reset hard
+```bash
+# show every action taken in git
+git reflog
+
+# checkout the particukar hash you want to restore to
+git checkout <sha-1>
+```
+Now we'll end up at a detached HEAD state. So we risk losing the files. So create a new `backup` branch of this state. So now checkout to master, and merge.
+
+## REVERT
+safe for multi user git project
+```bash
+git revert <sha-1>
 ```
 
 ## Misc
 ```bash
-# Change last commit with overriding message.
-git commit --amend -m "MESSAGE"
-
 # Force change on GitHub. Git interprets the "^" after the hash as the parent of this very commmit, and the "+" as a force push.
 git push origin +hash^:master
 ```
@@ -295,7 +342,7 @@ git mv file_from file_to
 # View Commit History
 * `$ git log`
 * `-2` # shows last 2 commits
-* `--stat` # shows more detail with each commit
+* `--stat` # shows more detail with each commit. Tells which files were changed within the commit.
 * `--graph`
   * `--since=2.weeks` # Commits since past 2 weeks
   * `--until=1.weeks`
@@ -451,7 +498,7 @@ A branch essentially says "I want to include the work of this commit and all par
 
 Switching branches will only show the files in that branch.
 
-#### Create
+#### Create Branch
 
 ```bash
 # Create new branch. HEAD still on master (Use checkout to switch).
@@ -466,7 +513,7 @@ git push <repo_name> <branch_name>
 ```
 From example, we see that `-u` causes `Branch 'personal' set up to track remote branch 'personal' from 'origin'.`
 
-#### Navigate
+#### Navigate Branch
 
 ```bash
 # Check which branch we are on.
@@ -479,7 +526,7 @@ git branch -r
 git checkout <branch_name>
 ```
 
-#### Delete
+#### Delete Branch
 
 ```bash
 # Delete a branch.
@@ -489,7 +536,7 @@ git branch -d <branch_name>
 git push <repo_name> --delete <branch_name>
 ```
 
-## Merging
+## Merging Branch
 **The merging is done from the perspective of where we merge `INTO`.**
 
 Merging in Git creates a special commit that has two unique parents. A commit with two parents essentially means "I want to include all the work from this parent over here and this one over here, and the set of all their parents."
@@ -594,6 +641,10 @@ git rebase master
 |
 3    - branch (1) was added to the original timeline.
 ```
+
+# Git Stash
+https://www.youtube.com/watch?v=KLEDKgMmbBI&list=PL-osiE80TeTuRUfjRe54Eea17-YfnOOAx&index=3
+
 
 # Useful
 
