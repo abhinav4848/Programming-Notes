@@ -206,8 +206,8 @@ $ git commit -m "Add your commit message inline"
 # Skip staging. Direct commiting. i.e. Includes all currently changed files into this commit. Untracked (new) files are not included.
 $ git commit -a
 
-# to improve upon the last commit, like overwriting it
-$ git commit --amend                   
+# to improve upon the last commit, like overwriting it. It overwrites the commit message as well as commit Hash
+$ git commit --amend -m "Add your new commit message"
 ```
 If the `-m` is ommited, the screen will move to the `vi` text editor, which can be exited with `:q`.
 
