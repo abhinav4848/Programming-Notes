@@ -2,17 +2,17 @@
 
 ## Python
 -   [The definitive guide to Python Imports](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
--   [Python, gitignore](./topics/vscode-python-gitignore.md)
+-   [venv](./topics/venv.md)
 
 ## Version Control
 
--   [Git personal](./topics/git-personal.md)
--   [Git Samort7's basics](./topics/git-samort7.md)
+-   [Git](./topics/git-personal.md)
+-   [Git (Samort7's basics)](./topics/git-samort7.md)
 
 # Linux
 
--   [file management](./topics/Linux_File_Management.md)
--   [system management](./topics/Linux_System_Management.md)
+-   [File management](./topics/Linux_File_Management.md)
+-   [System management](./topics/Linux_System_Management.md)
 
 # Googling
 
