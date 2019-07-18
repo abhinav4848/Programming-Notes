@@ -207,7 +207,7 @@ $ git commit -m "Add your commit message inline"
 $ git commit -a
 
 # to improve upon the last commit, like overwriting it
-$ git commit --amend                   
+$ git commit --amend -m "Add your new commit message"
 ```
 If the `-m` is ommited, the screen will move to the `vi` text editor, which can be exited with `:q`.
 
