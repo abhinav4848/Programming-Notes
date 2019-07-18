@@ -8,7 +8,7 @@
 ## Version Control
 
 -   [Git (Own Notes)](./topics/git.md)
--   [Git (Samort7's basics)](./topics/git-samort7.md)
+-   [Git (Samort7's basics on reddit)](./topics/git-samort7.md)
 
 # Linux
 
