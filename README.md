@@ -7,7 +7,7 @@
 
 ## Version Control
 
--   [Git (Own Notes)](./topics/git-personal.md)
+-   [Git (Own Notes)](./topics/git.md)
 -   [Git (Samort7's basics)](./topics/git-samort7.md)
 
 # Linux
