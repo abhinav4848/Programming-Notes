@@ -1,12 +1,13 @@
 # Programming
 
 ## Python
--   [The definitive guide to Python Imports](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
+-   [Python Imports](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
 -   [Venv](./topics/venv.md)
+-   [Python Notes](https://github.com/abhinav4848/Python)
 
 ## Version Control
 
--   [Git](./topics/git-personal.md)
+-   [Git (Own Notes)](./topics/git-personal.md)
 -   [Git (Samort7's basics)](./topics/git-samort7.md)
 
 # Linux
