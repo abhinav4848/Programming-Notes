@@ -461,8 +461,10 @@ git branch <name>
 git checkout -b <branch_name>
 
 # Create a remote branch. Usually origin.
+# Eg: git push -u origin personal.  We only need to use -u once to link local branch to remote and track it too.
 git push <repo_name> <branch_name>
 ```
+From example, we see that `-u` causes `Branch 'personal' set up to track remote branch 'personal' from 'origin'.`
 
 #### Navigate
 
