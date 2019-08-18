@@ -102,14 +102,18 @@ var element = document.getElementById("div1"); //gets element with children
 element.appendChild(para); //adds to the end of element
 ```
 
-**Adding Events Handlers**
+**Adding/Removing Events Handlers**:
+[WES Link](https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
 Method | Description
 -|-
-document.getElementById(id).onclick = function(){code}| Adding event handler code to an onclick event
+document.getElementById("myBtn").onclick = function(){code}| Adding event handler code to an onclick event. can give the function name or not. Doesn't matter
+document.getElementById("myBtn").addEventListener(event, function [,useCapture]); | Event can be any [HTML DOM event](https://www.w3schools.com/jsref/dom_obj_event.asp), for useCapture write true or false
+removeEventListener() | remove
 
 # Others
 **tagName vs nodeName**:
 You can use the tagName property to return the tag name of an element. The difference is that `tagName` only return tag names, while `nodeName` returns the name of all nodes (tags, attributes, text, comments).
+
 ```markdown
 Possible values:
 
