@@ -3,7 +3,7 @@ aka tagNames. `<a>, <li>, <body>...`
 ```javascript
 var x = document.getElementById("myP").tagName; //returns in all Caps.
 ```
-
+The HTML DOM Element Object- [Properties and Methods](https://www.w3schools.com/jsref/dom_obj_all.asp), [Styles](https://www.w3schools.com/jsref/dom_obj_style.asp), [Attribute Object](https://www.w3schools.com/jsref/dom_obj_attributes.asp), [DOM Events](https://www.w3schools.com/jsref/dom_obj_event.asp)
 # Attribute
 `<p class="nice">Demo text</p>`. "class" is the attribute and "nice" is the value.
 
@@ -103,12 +103,18 @@ element.appendChild(para); //adds to the end of element
 ```
 
 **Adding/Removing Events Handlers**:
-[WES Link](https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
+[W3S Link](https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
 Method | Description
 -|-
 document.getElementById("myBtn").onclick = function(){code}| Adding event handler code to an onclick event. can give the function name or not. Doesn't matter
 document.getElementById("myBtn").addEventListener(event, function [,useCapture]); | Event can be any [HTML DOM event](https://www.w3schools.com/jsref/dom_obj_event.asp), for useCapture write true or false
 removeEventListener() | remove
+
+## Add or remove attributes
+```javascript
+document.querySelector("title").getAttribute("id")
+document.querySelector("title").setAttribute("attribute", value)
+```
 
 # Others
 **tagName vs nodeName**:
@@ -132,4 +138,4 @@ Possible values:
 ## Notes
 1. `.item(0)` is same as `[0]`
 2. `onmouseup`,`document`, etc are properties of **Window** object. Hence `window.document.getElementById("header");` is same as `document.getElementById("header");`
-
+3. `window.alert(0)` and `document.write("hi")` are correct and not vice versa.

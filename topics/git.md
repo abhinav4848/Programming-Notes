@@ -661,6 +661,8 @@ While we all used git (and Github) in college to collaborate and save code, we m
 
 TBH that's really it. Git is a _very_ complex application that even I haven't fully learned yet. However, it has a fairly easy learning curve letting you take advantages of the most important bits quickly. If you have any questions feel free to post below and I'll be happy to answer best I can.
 
+# Contrib to open source stuff
+Create a fork, go your own fork, clone it to pc, create a new branch, work on it and push. Create a pull request on the original project.
 ---
 Sources:
 * [8483](https://github.com/8483/notes/blob/master/topics/git.md)
