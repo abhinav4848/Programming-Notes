@@ -2,7 +2,6 @@
 ## Javascript
 -   [Basics](./topics/js-basics.md)
 
-
 ## Python
 -   [Python Imports](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
 -   [Venv](./topics/venv.md)
@@ -12,6 +11,9 @@
 
 -   [Git (Own Notes)](./topics/git.md)
 -   [Git (Samort7's basics on reddit)](./topics/git-samort7.md)
+
+### Github Pages
+-   [GhPages](./topics/ghpages.md)
 
 # Linux
 
