@@ -417,18 +417,29 @@ A project can have multiple remotes ex. origin, test, production...
 # Add a remote i.e. bookmark a repo i.e. This NAME = this URL. The name is usually "origin", but it can be anything.
 # Eg: Linking a remote server with my local repo and using "origin" as an identifier name for it
 # git remote add origin https://github.com/abhinav4848/test.git 
-git remote add NAME URL
+git remote add <NAME> <URL>
 
 # List all remotes.
 # shows the URLs that Git has stored for the shortname to be used when reading and writing to that remote
+# Eg: 
+# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (fetch)
+# origin  https://github.com/YOUR_USERNAME/YOUR_FORK.git (push)
 git remote -v
 
 # Check a remote.
 git remote show origin
 
+# Stay up to date with a remote ("upstream") in your "master" branch
+git pull upstream master
+
 # Remove a remote.
 git remote rm NAME
 ```
+
+## Contrib to open source stuff
+Create a fork, go your own fork, clone it to pc, create a new branch, work on it and push. Create a pull request on the original project.
+
+**Keeping forks up to date**: [Syncing a fork](https://help.github.com/en/articles/syncing-a-fork)
 
 # Clone
 
@@ -660,9 +671,6 @@ While we all used git (and Github) in college to collaborate and save code, we m
    When I first started with git I always thought that you had to have a remote somewhere to use it (ie on github or gitlab). As I have learned that is not the case, you can initialize a git repository in any directory and commit any files, you are only restricted from pushing until you add a remote (duh). This is great to pair with the 1st tip, even if you are working by yourself. Having the ability to go back if you mess something up is essential.
 
 TBH that's really it. Git is a _very_ complex application that even I haven't fully learned yet. However, it has a fairly easy learning curve letting you take advantages of the most important bits quickly. If you have any questions feel free to post below and I'll be happy to answer best I can.
-
-# Contrib to open source stuff
-Create a fork, go your own fork, clone it to pc, create a new branch, work on it and push. Create a pull request on the original project.
 
 ---
 
