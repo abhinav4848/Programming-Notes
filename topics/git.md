@@ -663,7 +663,9 @@ TBH that's really it. Git is a _very_ complex application that even I haven't fu
 
 # Contrib to open source stuff
 Create a fork, go your own fork, clone it to pc, create a new branch, work on it and push. Create a pull request on the original project.
+
 ---
+
 Sources:
 * [8483](https://github.com/8483/notes/blob/master/topics/git.md)
 * [Git-Scm](https://git-scm.com/book/en/v2)
