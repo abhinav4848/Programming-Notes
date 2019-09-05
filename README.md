@@ -1,6 +1,7 @@
 # Programming: Front End
 ## Javascript
 -   [Basics](./topics/js-basics.md)
+-   [Intermediate](./topics/js-intermediate.md))
 
 # Programming: Back End
 -   [.htaccess](./topics/htaccess.md)

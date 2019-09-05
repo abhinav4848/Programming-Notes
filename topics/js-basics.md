@@ -37,6 +37,7 @@ document.documentElement //The full document
 ```
 
 **Finding HTML Elements**
+
 Method | Description
 -|-
 document.getElementById(id) | Find an element by element id
@@ -62,18 +63,19 @@ nodeValue for attribute nodes is the attribute value
 ```
 
 **Changing HTML Elements**
+
 Property | Description
 -|-
-element.innerHTML =  new html content | Change the inner HTML of an element
+element.innerHTML =  new html | Change the inner HTML of an element
 element.attribute = new value | Change the attribute value of an HTML element
-element.style.property = new style | Change the style of an HTML element
+element.style.property = new style; | Change the style of an HTML element
 
 ```javascript
 var element = document.getElementById("id01");
-element.innerHTML = "New Heading";
+element.innerHTML = "<div>Text</div>";
 
 document.getElementById("myImage").src = "landscape.jpg";
-document.getElementById("p2").style.color = "blue";
+document.getElementById("p2").style.borderBottom = "solid 1px red";
 ```
 
 Method | Description
@@ -104,11 +106,24 @@ element.appendChild(para); //adds to the end of element
 
 **Adding/Removing Events Handlers**:
 [W3S Link](https://www.w3schools.com/js/js_htmldom_eventlistener.asp)
+
 Method | Description
 -|-
 document.getElementById("myBtn").onclick = function(){code}| Adding event handler code to an onclick event. can give the function name or not. Doesn't matter
 document.getElementById("myBtn").addEventListener(event, function [,useCapture]); | Event can be any [HTML DOM event](https://www.w3schools.com/jsref/dom_obj_event.asp), for useCapture write true or false
 removeEventListener() | remove
+
+**Using events**
+```javascript
+function buttonClick(e){
+    console.log(e); // Logs the event.
+    console.log(e.target); // The clicked element.
+    console.log(e.target.id); // Clicked element id.
+    console.log(e.target.className); // Clicked element class.
+
+    console.log(e.ctrlkey); // Is control pressed boolean. altkey, shiftkey...
+}
+```
 
 ## Add or remove attributes
 ```javascript
