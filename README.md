@@ -1,24 +1,24 @@
-# Programming: Front End
+# Languages
+
 ## Javascript
 -   [Basics](./topics/js-basics.md)
--   [Intermediate](./topics/js-intermediate.md))
+-   [Intermediate](./topics/js-intermediate.md)
 
-# Programming: Back End
--   [.htaccess](./topics/htaccess.md)
-
-## Node
+### Node
 -   [Node.js](./topics/node.md)
 
 ## PHP
--   [PHP](./topics/php_snippets_mysqli.md)
+-   [PHP Snippets (MySQLi)](./topics/php_snippets_mysqli.md)
 
-# Python
+## Python
 -   [Python Imports](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
 -   [Venv](./topics/venv.md)
--   [Python Notes](https://github.com/abhinav4848/Python)
+-   [Python Notes (ext.&UpperRightArrow;)](https://github.com/abhinav4848/Python)
+
+# Website Management
+-   [.htaccess](./topics/htaccess.md)
 
 # Version Control
-
 -   [Git (Own Notes)](./topics/git.md)
 -   [Git (Samort7's basics on reddit)](./topics/git-samort7.md)
 
@@ -26,7 +26,6 @@
 -   [GhPages](./topics/ghpages.md)
 
 # Linux
-
 -   [File management](./topics/Linux_File_Management.md)
 -   [System management](./topics/Linux_System_Management.md)
 

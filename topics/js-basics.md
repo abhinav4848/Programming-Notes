@@ -132,7 +132,7 @@ document.querySelector("title").setAttribute("attribute", value)
 ```
 
 # Others
-**tagName vs nodeName**:
+**`tagName` vs `nodeName`**:
 You can use the tagName property to return the tag name of an element. The difference is that `tagName` only return tag names, while `nodeName` returns the name of all nodes (tags, attributes, text, comments).
 
 ```markdown
