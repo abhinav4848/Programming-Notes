@@ -3,9 +3,13 @@
 ## Javascript
 -   [Basics](./topics/js-basics.md)
 -   [Intermediate](./topics/js-intermediate.md)
+-   [New Stuff](./topics/js-new-stuff.md)
 
 ### Node
 -   [Node.js](./topics/node.md)
+
+### React
+-   [Basics](./topics/react-basics.md)
 
 ## PHP
 -   [PHP Snippets (MySQLi)](./topics/php_snippets_mysqli.md)
@@ -16,6 +20,7 @@
 -   [Python Notes (ext.&UpperRightArrow;)](https://github.com/abhinav4848/Python)
 
 # Website Management
+-   [set up Apache virtualhost](./topics/apache-virtualhost.md)
 -   [.htaccess](./topics/htaccess.md)
 
 # Version Control
