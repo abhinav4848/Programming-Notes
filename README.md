@@ -13,6 +13,7 @@
 
 ## PHP
 -   [PHP Snippets (MySQLi)](./topics/php_snippets_mysqli.md)
+-   [PHP Intermediate stuff](./topics/php-im.md)
 
 ## Python
 -   [Python Imports](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
@@ -20,7 +21,7 @@
 -   [Python Notes (ext.&UpperRightArrow;)](https://github.com/abhinav4848/Python)
 
 # Website Management
--   [set up Apache virtualhost](./topics/apache-virtualhost.md)
+-   [Set up Apache virtualhost](./topics/apache-virtualhost.md)
 -   [.htaccess](./topics/htaccess.md)
 
 # Version Control
