@@ -20,7 +20,7 @@ Install the LTS version from [website](https://nodejs.org/en/download/). Works f
 Go to a project folder and run `npm init`. It will ask a few questions and generate a `package.json` file.
 
 NPM allows to install packages 2 ways.
--   **Locally**: Runs only in the project folder. `npm install modulename`. Installs locally in project folder in a folder called `node_modules`, adds dependency to `package.json`'s dependencies.
+-   **Locally**: Runs only in the project folder. `npm install modulename`. Installs locally in project folder in a folder called `node_modules`, and adds it as a dependency into `package.json`'s dependencies section.
 -   **Globally**: Can run anywhere. Mostly in terminal: `npm install -g live-server`. In this case, `package.json` won't get updated.
 
 **Notes**

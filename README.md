@@ -3,7 +3,7 @@
 ## Javascript
 -   [Basics](./topics/js-basics.md)
 -   [Intermediate](./topics/js-intermediate.md)
--   [New Stuff](./topics/js-new-stuff.md)
+-   Destructuring, Template literals
 
 ### Node
 -   [Node.js](./topics/node.md)
@@ -12,13 +12,19 @@
 -   [Basics](./topics/react-basics.md)
 
 ## PHP
--   [PHP Snippets (MySQLi)](./topics/php_snippets_mysqli.md)
+-   [PHP Snippets (MySQLi)](./topics/php-snippets-mysqli.md)
 -   [PHP Intermediate stuff](./topics/php-im.md)
 
+### Composer
+-   [Composer dependency manager](./topics/composer.md)
+
+### Laravel
+-   [Laravel](./topics/laravel.md)
+
 ## Python
--   [Python Imports](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
+-   [Python Imports (ext link)](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
 -   [Venv](./topics/venv.md)
--   [Python Notes (ext.&UpperRightArrow;)](https://github.com/abhinav4848/Python)
+-   [My Python Notes (ext link)](https://github.com/abhinav4848/Python)
 
 # Website Management
 -   [Set up Apache virtualhost](./topics/apache-virtualhost.md)
@@ -26,31 +32,21 @@
 
 # Version Control
 -   [Git (Own Notes)](./topics/git.md)
--   [Git (Samort7's basics on reddit)](./topics/git-samort7.md)
 
 ## Github Pages
 -   [GhPages](./topics/ghpages.md)
 
 # Linux
--   [File management](./topics/Linux_File_Management.md)
--   [System management](./topics/Linux_System_Management.md)
+-   [File management](./topics/Linux-File-Management.md)
+-   [System management](./topics/Linux-System-Management.md)
 
 # Shell
 -   [Shells](./topics/shells.md)
 
-# Googling
+# Software Engineering
+-   [Concepts](./topics/software-engineering-concepts.md)
 
-```
-"exact query"
-website.com: query
-query 2017..2018
-query ..2017 (so only 2017)
-filetype:pdf query
-query -excludedTerm
-link:nytimes.com (to find pages that link here)
-“Come * right now * me” (* is a wildcard placeholder that google will fill)
-related:amazon.com
-chocolate OR white chocolate
-```
+# Web Helpers
+-   [Site Tricks](./topics/site-tricks.md)
 
-Thanx to 8483.
+Thanx to [8483 (ext link)](https://github.com/8483/notes).
