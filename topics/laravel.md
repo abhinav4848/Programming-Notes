@@ -44,4 +44,15 @@ If you have PHP installed locally and you would like to use PHP's built-in devel
 php artisan serve
 ```
 
+or alternatively, go to the project public folder and open cmd
+
+```bash
+php -S localhost:8000
+```
+
+# Projects to replicate and test
+[Monica](https://github.com/monicahq/monica)
+[EdPaper](https://github.com/Edraens/EdPaper)
+[EdPaste](https://github.com/Edraens/EdPaste)
+
 
