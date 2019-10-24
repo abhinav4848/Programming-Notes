@@ -4,6 +4,7 @@
 -   [Basics](./topics/js-basics.md)
 -   [Intermediate](./topics/js-intermediate.md)
 -   Destructuring, Template literals
+-   [JS snippets](./js-snippets.md)
 
 ### Node
 -   [Node.js](./topics/node.md)

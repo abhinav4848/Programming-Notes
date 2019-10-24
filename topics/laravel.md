@@ -30,7 +30,7 @@ to create the `vendor` directory. It's **never** version controlled. Now run
 ```bash
 npm install && npm dev
 ```
-Now make an `.env` file in root directory and copy content from [Laravel's .env.example](https://raw.githubusercontent.com/laravel/laravel/master/.env.example) file into it.
+Now make an `.env` file in root directory and copy content from [Laravel's .env.example](https://raw.githubusercontent.com/laravel/laravel/master/.env.example) file into it (or rename the `env.example` file given with the github package)
 
 Now create an application encryption key by:
 ```bash
@@ -51,8 +51,8 @@ php -S localhost:8000
 ```
 
 # Projects to replicate and test
-[Monica](https://github.com/monicahq/monica)
-[EdPaper](https://github.com/Edraens/EdPaper)
-[EdPaste](https://github.com/Edraens/EdPaste)
+[Monica](https://github.com/monicahq/monica),
+
+[EdPaper](https://github.com/Edraens/EdPaper),
 
 

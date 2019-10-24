@@ -114,14 +114,20 @@ document.getElementById("myBtn").addEventListener(event, function [,useCapture])
 removeEventListener() | remove
 
 **Using events**
+```html
+<a href="#" id="hi" class="linker fun" data-value="testing">Click</a>
+```
 ```javascript
-function buttonClick(e){
-    console.log(e); // Logs the event.
-    console.log(e.target); // The clicked element.
-    console.log(e.target.id); // Clicked element id.
-    console.log(e.target.className); // Clicked element class.
+document.getElementById('hi').addEventListener("click", buttonClick);
 
-    console.log(e.ctrlkey); // Is control pressed boolean. altkey, shiftkey...
+function buttonClick(e) {
+    console.log('e: ' + e); // Logs the event.
+    console.log('e.target: ' + e.target); // The clicked element.
+    console.log('e.target.id: ' + e.target.id); // Clicked element id.
+    console.log('e.target.className: ' + e.target.className); // Clicked element class.
+    console.log('e.target.dataset.value: ' + e.target.dataset.value); // Clicked element data-attribute.
+
+    console.log('e.ctrlkey: ' + e.ctrlkey); // was control pressed at same time? it's boolean. Others: altkey, shiftkey...
 }
 ```
 
@@ -154,3 +160,4 @@ Possible values:
 1. `.item(0)` is same as `[0]`
 2. `onmouseup`,`document`, etc are properties of **Window** object. Hence `window.document.getElementById("header");` is same as `document.getElementById("header");`
 3. `window.alert(0)` and `document.write("hi")` are correct and not vice versa.
+
