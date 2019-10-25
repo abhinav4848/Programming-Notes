@@ -1,5 +1,5 @@
-# Laravel
-[Official Documentation](https://laravel.com/docs/)
+# Laravel Basics
+[Official Documentation](https://laravel.com/docs/), [Brad Traversy YouTube](https://www.youtube.com/playlist?list=PLillGF-RfqbYhQsN5WMXy6VsDMKGadrJ-)
 
 ## Make fresh Laravel installation
 First, download the Laravel installer using Composer. (Make sure composer's vendor/bin is added to path.)
@@ -201,14 +201,17 @@ Add new css to `resources\assets\sass\_custom.scss` file. The `_` says that this
 Then do `npm run dev`
 
 ## Installing npm modules
-### bootstrap
-```bash
-$ npm install bootstrap
-```
+### Bootstrap
+*[Source of info](https://www.itechempires.com/2019/09/configure-bootstrap-vue-react-in-laravel-6-with-frontend-scaffolding/amp/#Install_Bootstrap_in_Laravel_6)*
 
-Bootstrap gets added to `package.json`. Now go to `resources\sass\app.scss` and add
+From Laravel 6, UI is separated into its own component. So install it in project using `composer require laravel/ui`.
 
-```scss
-// Bootstrap
-@import "node_modules/bootstrap/scss/bootstrap";
-```
+check `php artisan ui --help` for which scaffoldings it can set up. Now generate bootstrap scaffolding with it, via `php artisan ui bootstrap`
+
+Then `npm install && npm run dev`
+
+**Changes made**: 
+* Bootstrap gets added to `package.json`. 
+* The resource directory has updated `bootstrap.js` , `app.scss` and new `_variables.scss` file
+
+Add your custom css with `@import 'custom';` in the `app.scss` file. It is to be located in same folder as `_custom.scss`

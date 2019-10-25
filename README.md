@@ -20,7 +20,8 @@
 -   [Composer dependency manager](./topics/composer.md)
 
 ### Laravel
--   [Laravel](./topics/laravel.md)
+-   [Laravel Basics](./topics/laravel-basics.md)
+-   [Laravel IM](./topics/laravel-intermediate.md)
 
 ## Python
 -   [Python Imports (ext link)](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
