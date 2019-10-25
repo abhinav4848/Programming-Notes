@@ -5,21 +5,19 @@
 ```
 ```javascript
 $(".delete_history").click(function(e) {
-    e.preventDefault();
-
-    if (confirm("Sure you want to delete this entry?")) {
-        var element = this;
-        $.ajax({
-            type: "POST",
-            url: "functions.php",
-            data: {
-                id: element.dataset.id // reads the data attribute
-            },
-            success: function(data) {
-                alert(data); // data is the echoed out results of the php page
-            }
-        });
-    }
+    e.preventDefault(); //usually for submit buttons of forms
+    
+    var element = this;
+    $.ajax({
+        type: "POST",
+        url: "functions.php",
+        data: {
+            id: element.dataset.id // reads the data attribute
+        },
+        success: function(data) {
+            alert(data); // data is the echoed out results of the php page
+        }
+    });
 });
 ```
 
