@@ -21,7 +21,7 @@
 
 ### Laravel
 -   [Laravel Basics](./topics/laravel-basics.md)
--   [Laravel IM](./topics/laravel-intermediate.md)
+-   [Laravel Intermediate](./topics/laravel-intermediate.md)
 
 ## Python
 -   [Python Imports (ext link)](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
