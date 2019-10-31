@@ -107,6 +107,7 @@ This makes a `app\Http\Controllers\PagesController.php` file. You may need to re
 ```bash
 php artisan make:controller PagesController
 ```
+(Add `--resource` after controller name to have the file include all the resource methods available via Laravel, for the CRUD functionality needed to interact with the database)
 
 ### Use a controller
 Inside the class of a particular controller, methods are written like:
