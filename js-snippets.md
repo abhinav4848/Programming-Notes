@@ -1,4 +1,5 @@
 # Javascript Snippets
+
 ## Read the data-attributes and do ajax stuff
 ```html
 <a href="#" class="delete_history" data-id="volla">Click me</a>
@@ -20,7 +21,3 @@ $(".delete_history").click(function(e) {
     });
 });
 ```
-
-# Questions
-1. [Difference between $(this) and event.target?](https://stackoverflow.com/a/21667010/2365231)
-2. 
