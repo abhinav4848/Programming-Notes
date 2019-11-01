@@ -1,3 +1,13 @@
+# Getting started
+go to https://create-react-app.dev/docs/getting-started. You don't even need to have `create-react-app` installed anymore. Just follow as advised.
+
+```bash
+npx create-react-app my-app
+cd my-app
+npm start
+```
+If you modify any file in `package.json`, run `npm install` to update.
+
 # Default starting code
 1. `index.js` is starting file and we use `index.css` for it.
 2. If we don't mention extension, it assumes `.js`. Eg: `./App`.
