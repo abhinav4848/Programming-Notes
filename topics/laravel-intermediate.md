@@ -304,3 +304,18 @@ public function destroy($id)
     return redirect('/posts')->with('success', 'Post removed');
 }
 ```
+
+## Upload multiple files
+In form, add 
+```php
+{{ Form::file('gallery[]', array('multiple'=>true,'accept'=> 'image/*, audio/*')) }}
+```
+In PostsController, add
+```php
+//handle multiple files
+if ($request->hasFile('gallery')) {
+    foreach ($request->file('gallery') as $file) {
+        $file->storeAs('public/cover_images', $file->getClientOriginalName());
+    }
+}
+```

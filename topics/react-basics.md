@@ -89,22 +89,41 @@ ReactDOM.render(
 ```
 
 # Exporting and Importing
+When only one thing being returned from a component, use `default` as export: 
 ```jsx
-// When only one thing being returned from component, use default
+// export
 export default FuncName;
 
-// so we can import this way
+// import
 import AnyFuncName from './FuncFile';
 ```
 
+When we are to export multiple, we export using a name, and import using destructuring: 
 ```jsx
-// When we are to export multiple, we export this way
+// export
 export const robots = [
     {
         id: 1
     },
+    {
+        id: 2
+    }
 ]
 
-// And we import this way (via destructuring)
+// Import (via destructuring)
 import { robots, cats } from './robots';
+```
+
+Same for exporting json. Basically, use `{}` to import, when not exporting `default`.
+```jsx
+// export
+export const particlesOptions = {
+  //json here
+}
+
+// import
+import { particlesOptions } from './particleoptions';
+
+// later in the code...
+<p>{particlesOptions.particles.number.value}</p>
 ```
