@@ -32,9 +32,16 @@ if (mysqli_num_rows($result)==0) { PERFORM ACTION }
 ## While loop over php query results
 ```php
 while ($row = mysqli_fetch_array($result)) {
-		print_r($row);
-		echo "<br>";
+    print_r($row);
+    echo "<br>";
 }
+```
+
+## Loop over results again
+https://stackoverflow.com/a/6439267/2365231
+```php
+// set the pointer back to the beginning
+mysql_data_seek($result, 0);
 ```
 
 # PHP MySQL INSERT
