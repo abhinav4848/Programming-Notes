@@ -1,7 +1,8 @@
 # Bootstrap
 ## Add a search box with cancel button, and JS instant Search features
+Only for chrome
 ```html
- <input type="search" name="searchTerm" class="form-control" id="searchField" autocomplete="off" placeholder="Enter search term here">
+ <input type="search" name="searchTerm" class="form-control" id="searchField" autocomplete="off" placeholder="">
 ```
 
 ```css

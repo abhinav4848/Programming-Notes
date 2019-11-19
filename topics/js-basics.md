@@ -137,6 +137,56 @@ document.querySelector("title").getAttribute("id")
 document.querySelector("title").setAttribute("attribute", value)
 ```
 
+# Misc
+**Change title**
+```js
+document.title = 'SearchStuff: (' + engine + ')  ' + searchTerm;
+```
+
+**Run something on page load**
+```js
+window.onload = function() {};
+```
+
+**[URL](https://developer.mozilla.org/en-US/docs/Web/API/Window/location#Location_object)**
+
+Full url: `<protocol>//<hostname>:<port>/<pathname><search><hash>`
+therefore, properties available are:
+```md
+href - the entire URL
+protocol - the protocol of the URL
+host - the hostname and port of the URL
+hostname - the hostname of the URL
+port - the port number the server uses for the URL
+pathname - the path name of the URL
+search - the query portion of the URL
+hash - the anchor portion of the URL
+```
+
+**Read the url**. Eg: read the value of `search` from `localhost?search=param`
+```js
+var url_string = window.location.href // localhost?search=param (the full url)
+//The URL() constructor returns a newly created URL object representing the URL defined by the parameters.
+var url = new URL(url_string);
+var c = url.searchParams.get("search");
+document.getElementById('searchField').value = c; //param
+
+searchField(); // run the function that will execute the search using searchField input
+```
+
+**Change URL**
+```js
+// add url get parameters to end of url
+var searchTerm = $("#searchField").val();
+
+// 'window.location.pathname' is everything after the domain_name.tld
+if (searchTerm != '') {
+    window.history.replaceState('', '', window.location.pathname + '?search=' + searchTerm);
+} else {
+    window.history.pushState('', '', window.location.pathname);
+}
+```
+
 # Others
 **`tagName` vs `nodeName`**:
 You can use the tagName property to return the tag name of an element. The difference is that `tagName` only return tag names, while `nodeName` returns the name of all nodes (tags, attributes, text, comments).
