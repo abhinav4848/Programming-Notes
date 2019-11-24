@@ -55,4 +55,7 @@
 # Web Helpers
 -   [Site Tricks](./topics/site-tricks.md)
 
+# Misc
+-   [Mediawiki](./topics/mediawiki.md)
+
 Thanx to [8483 (ext link)](https://github.com/8483/notes).
