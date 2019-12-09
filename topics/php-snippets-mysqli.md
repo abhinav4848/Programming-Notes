@@ -172,6 +172,7 @@ $date = DateTime::createFromFormat('Y-m-d\TH:i', $_POST['date'])->format('d-m-Y 
 date("d-m-Y", strtotime($row['dob']));
 date("d-M-Y", strtotime('1st April, last year')); //01-04-2018
 date('Y-m-d H:i:s') //MySQL datetime format
+date('Y-m-d H:i:s', strtotime($_POST['date']));
 ```
 
 # Quick printing in HTML
