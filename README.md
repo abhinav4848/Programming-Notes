@@ -57,5 +57,7 @@
 
 # Misc
 -   [Mediawiki](./topics/mediawiki.md)
+-   [Excel](./topics/ms-excel.md)
+-   [Excel/Docs Formulae info](./topics/ms-excel-formulae.md)
 
 Thanx to [8483 (ext link)](https://github.com/8483/notes).
