@@ -8,7 +8,7 @@
 -   [Basics](./topics/js-basics.md)
 -   [Intermediate](./topics/js-intermediate.md)
 -   Destructuring, Template literals
--   [JS snippets](./js-snippets.md)
+-   [JS snippets](./topics/js-snippets.md)
 
 ### Node
 -   [Node.js](./topics/node.md)
@@ -24,8 +24,14 @@
 -   [Composer dependency manager](./topics/composer.md)
 
 ### Laravel
--   [Laravel Basics](./topics/laravel-basics.md)
--   [Laravel Intermediate](./topics/laravel-intermediate.md)
+-   [Laravel Getting Started](./topics/laravel-gettingstarted.md)
+-   [Laravel Routes](./topics/laravel-routes.md)
+-   [Laravel Artisan](./topics/laravel-artisan.md)
+-   [Laravel Controllers/Eloquent](./topics/laravel-controllers.md)
+-   [Laravel Blade/Views](./topics/laravel-blade.md)
+-   [Laravel Forms](./topics/laravel-forms.md)
+-   [Laravel Misc](./topics/laravel-misc.md)
+
 
 ## Python
 -   [Python Imports (ext link)](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
