@@ -70,6 +70,7 @@ public function user()
     return $this->belongsTo('App\User');
 }
 ``` 
+
 In User Model, add
 ```php
 public function posts()
@@ -79,14 +80,35 @@ public function posts()
 }
 ```
 
-In Dashboard controller, `use App\User;` and add
+In DashboardController, add
 ```php
+use App\User;
+
 public function index()
 {
     $user_id = auth()->user()->id;
     $user = User::find($user_id);
+    
     return view('dashboard')->with('posts', $user->posts);
 }
+```
+
+In dashboard view, add:
+```php
+<h3>Your listings</h3>
+@if (count($posts)>0)
+    <table class="table table-striped">
+        <tr>
+            <th>Company</th>
+        </tr>
+        @foreach ($posts as $post)
+        <tr>
+            <td>{{$post->name}}</td>
+        </tr>
+        @endforeach
+        
+    </table>
+@endif
 ```
 
 Now for any posts view, just add `{{$post->user->name}}`, 
@@ -144,7 +166,7 @@ public function edit($id)
 1. `npm run watch`
 1. `git init`
 1. create `resources/sass/_variables.sass` and add it to `resources/sass/app.sass`
-1. Rename `welcome.view.php` as `home.view.php` and change the route as well.
+1. (Optional) Rename `home.view.php`->`dashboard.view.php`, `welcome.view.php`->`home.view.php`, and change the Controller, Auth Controllers, Providers, `Middleware/RedirectIfAuthenticated` and route as well.
 1. Include into `layouts.app` the standard code.
 1. Create Controller as `php artisan make:controller PagesController --resource`
 1. Add this to `web.php` 

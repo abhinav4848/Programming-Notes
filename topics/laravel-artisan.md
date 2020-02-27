@@ -1,23 +1,27 @@
 # Artisan
 its'a a CLI. You can use `php artisan`-
 ```bash
-list #all options that come with artisan
-help migrate
-make:controller PostsController
-make:model Post -m #to make a migration file for it as well. Keep it singular
-make:migration name_of_migration -table=posts
-migrate # to run the migration
-tinker # Edit database in CLI directly
+php artisan list # all options that come with artisan
+php artisan help migrate
+php artisan migrate
+php artisan make:controller PostsController
+php artisan make:model Post -m # to make a migration file for it as well. Keep it singular
+php artisan make:migration name_of_migration -table=posts
+php artisan migrate # to run the migration
+php artisan tinker # Edit database in CLI directly
+php artisan make:auth # creates authentication and uses `home.blade.php` as the dashboard
+php artisan serve # starts local server
+php artisan route:list # all routes available
 ```
 
-# Making Databases
+## Making Databases
 Go to mysql and make a database. Just the name. No adding tables cuz that's done with migrations.
 
 Now go to Terminal and `php artisan make:controller PostsController --resource`. Then make a **model**. Use singluar form of the above noun: `php artisan make:model Post -m`.
 
 This makes 2 files:
-1. app\Post.php
-2. database\migrations\datetime_create_posts_table.php
+1. `app\Post.php`
+2. `database\migrations\datetime_create_posts_table.php`
 
 Now go to #2 and add more table columns to `up()`. This is for adding columns. ('timestamp') automatically adds 2 columns. created_at and updated_at)
 
@@ -25,8 +29,62 @@ Similarly, `down()` is for rolling back migrations.
 
 Now go to the `.env` file and update database credentials.
 
+Add any extra columns to the users table as needed.
+
 Now run `php artisan migrate`. It will make all the tables.
 
+Eg:
+Create Posts table
+```php
+public function up()
+{
+    Schema::create('posts', function (Blueprint $table) {
+        $table->bigIncrements('id');
+        $table->string('title');
+        $table->mediumText('body');
+        $table->timestamps();
+    });
+}
+
+public function down()
+{
+    Schema::dropIfExists('posts');
+}
+```
+Add user id to posts table
+```php
+public function up()
+{
+    Schema::table('posts', function (Blueprint $table) {
+        $table->integer('user_id');
+    });
+}
+
+public function down()
+{
+    Schema::table('posts', function (Blueprint $table) {
+        $table->dropColumn('user_id');
+    });
+}
+```
+Add cover image to posts table
+```php
+public function up()
+{
+    Schema::table('posts', function (Blueprint $table) {
+        $table->string('cover_image');
+    });
+}
+
+public function down()
+{
+    Schema::table('posts', function (Blueprint $table) {
+        $table->dropColumn('cover_image');
+    });
+}
+```
+
+## Tinker
 Now generate some data for populating the database. Go to command line and `php artisan tinker`. Now use Eloquent, which is an ORM.
 
 Eg:
@@ -65,6 +123,7 @@ To add another post, reinstantiate an instance of the model (ie. `$post = new Ap
 
 Now go to the PostsController and make sure there are resource methods you created with the `--resource` option above. These help with CRUD functionality.
 
+## Routes
 Come to routes and add a route for all these functions.
 Or just a shortcut command also exists.
 
@@ -86,7 +145,7 @@ The shortcut is to open `routes.php` add
 Route::resource('posts', 'PostsController');
 ```
 
-# Make a provider
+## Make a provider
 ```bash
 php artisan make:provider FormServiceProvider
 ```
