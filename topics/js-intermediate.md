@@ -391,7 +391,7 @@ Imagine a json response from a file called `json_demo.txt`, whose output is:
     ]
 }
 ```
-Old way of using Ajax and reading json the json response:
+Old way of using Ajax and reading the json response:
 ```js
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
