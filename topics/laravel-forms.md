@@ -100,6 +100,15 @@ Make `resources\views\inc\messages.blade.php`, add all kinds of messages:
     </div>
     
 @endif
+
+{{-- For error we manually create. That is, something the programmers logic decides should be an error --}}
+@if (session('error'))
+    <div class="alert alert-danger">
+        {{session('error')}}
+    </div>
+@endif
+
+
 ```
 Then go to main layout template. eg `resources\views\layouts\app.blade.php` and `@include('inc.messages')`
 
@@ -301,11 +310,12 @@ if ($request->hasFile('gallery')) {
     * Do the same for the second component: Create a file called `textarea.blade.php` and change `text` to `textarea`.
     * For the `submit` button, create another file and put
         ```html
+        <!-- We leave the attribute as a varaible cuz we may want the button to be different colour at different places -->
         <div>
             {{ Form::submit($value, $attributes) }}
         </div>
         ```
-    * For `input type="hidden"`, new file and put
+    * For `input type="hidden"`, make new file and put
         ```php
         {{ Form::hidden($name, $value, $attributes) }}
         ```
@@ -317,7 +327,7 @@ if ($request->hasFile('gallery')) {
 {!! Form::open(['url' => 'todo']) !!}
 
 // {{-- custom component --}}
-{{ Form::bsText('text') }}
+{{ Form::bsText('text', 'Default Value', ['placeholder'=>'Title of the Event']) }}
 {{ Form::bsTextarea('body') }}
 {{ Form::bsText('due') }}
 {{ Form::bsSubmit('Submit', ['class'=>'btn btn-primary']) }}
@@ -342,4 +352,13 @@ if ($request->hasFile('gallery')) {
 // </div> --}}
 {!! Form::close() !!}
 @endsection
+```
+
+**Note:** Some of the basic stuff is already pre-made, like [seen here](https://laravelcollective.com/docs/6.0/html#text), but we wrote our own code to simplify our life, else it's ugly like:
+```php
+// We have to mention the label manually everytime
+{{ Form::label('website', 'Company Website') }}
+
+// we have to specify class everytime
+{{ Form::text('website','',['class'=>'form-control', 'placeholder'=>'Company Website']) }}
 ```
