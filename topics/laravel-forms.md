@@ -323,7 +323,8 @@ if ($request->hasFile('gallery')) {
 1. Now just go to your desired form view and put calling code: 
 ### Create
 ```php
-// {{-- {!! Form::open(['action' => 'TodosController@store', 'method'=>'POST']) !!} --}}
+{!! Form::open(['action' => 'TodosController@store', 'method'=>'POST']) !!}
+// or
 {!! Form::open(['url' => 'todo']) !!}
 
 // {{-- custom component --}}
