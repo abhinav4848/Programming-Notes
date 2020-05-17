@@ -1,6 +1,6 @@
-## Controllers
+# Controllers
 
-### Make a controller
+## Make a controller
 This makes a `app\Http\Controllers\PagesController.php` file. You may need to refresh the sidebar.
 
 ```bash
@@ -11,7 +11,7 @@ php artisan make:controller PagesController --resource
 Route::resource('page', 'PagesController');
 ```
 
-### Use a controller
+## Use a controller
 Inside the class of a particular controller, methods are written like:
 
 `view('pages.index')` means look inside `resources/views/pages` folder for `index.blade.php`
@@ -60,13 +60,19 @@ public function services()
 }
 ```
 
+## Protect certain pages via auth
+Add this at the top of controller:
+```php
+public function __construct()
+{
+    //$this->middleware('auth'); // protect the full controller
+    $this->middleware('auth', ['except'=>['index','show']]);
+}
+```
+
+Here, `index` and `show` are publically accessible.
+
 # Fetching Data with Eloquent
-In the Model, the name of the table is the plural version of the name of the class. To change the name of the table you want to be using, just make `protected $table='posts';`
-
-Same for primary key. The default is 'id'. But if you wanna use something else, just type `public $primaryKey = 'item_id';`
-
-Similarly, timestamps are by default true. So if you wanna specify false, type `public $timestamps = false;`
-
 Go to `PostsController.php` and work on `index()`. Add the view. eg: `return view('posts.index');` to it. Now corresponding to it, create a view at `resources\views\posts\index.blade.php`.
 
 Now also add the 'namespace\Model' file stuff, ie `use App\Post;` (App is the namespace of Post) into PostsController.php at the top of the Controller page.
@@ -74,23 +80,70 @@ Now also add the 'namespace\Model' file stuff, ie `use App\Post;` (App is the na
 Now we can use **Eloquent**, an Object Relation mapper. In the PostsController@`index()`, type: 
 
 ```php
-// $posts =  Post::all();
+// $posts = Post::all();
 // $post = Post::where('title', 'Post Two')->get();
 // $posts = Post::orderBy('title', 'desc')->take(2)->get();
 $posts = Post::orderBy('title', 'desc')->get();
 return view('posts.index')->with('posts', $posts);
 ```
-Eloquent has lots of functions inbuilt and all() is a static method in Eloquent class which Post model extends. 
+
+Eloquent has lots of functions inbuilt and all() is a static method in Eloquent class which the "Post" model in this example extends. 
 
 In the `show($id)`, type 
+
 ```php
 $post = Post::find($id);
 return view('posts.show')->with('post', $post);
 ```
 The $id will be obtained from the url as specified by the routes. 
 
-If you do wanna use SQL queries directly, type `use DB` at the top and then `DB::select('SELECT * FROM posts');`
+### Get a particular User's posts
+```php
+public function index()
+{
+    $user_id = auth()->user()->id;
+    $user = User::find($user_id);
+    
+    return view('dashboard')->with('posts', $user->posts);
+}
+```
 
-**Pagination**: in the controller in index(), use query like: `$posts = Post::orderBy('title', 'desc')->paginate(1);`
+But for this, the assosciation must've been made in the model. ie.
+
+```php
+class Post extends Model
+{
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+}
+```
+
+### Pagination
+In the controller in index(), use query like: `$posts = Post::orderBy('title', 'desc')->paginate(1);`
 
 and on the view page, add pagination like: `{{$posts->links()}}`
+
+### Misc
+#### Changing the defaults
+In the Model, the default name of the table is the plural version of the name of the class. To change the name of the table you want to be using, just make `protected $table='posts';`
+
+ie.
+```php
+class Listing extends Model
+{
+    protected $table='listings'; //assumed by default since class is "Listing"
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+}
+```
+
+Same for primary key. The default is 'id'. But if you wanna use something else, just type `public $primaryKey = 'item_id';`
+
+Similarly, timestamps are by default true. So if you wanna specify false, type `public $timestamps = false;`
+
+#### Using raw sql queries in the controller
+In the controller, if you do wanna use SQL queries directly, type `use DB` at the top and then `DB::select('SELECT * FROM posts');`

@@ -148,8 +148,8 @@ public function update(Request $request, $id)
 ## Delete
 For deleting, put this in the `show` page itself:
 ```php
-{!! Form::open(['action' => ['TodosController@destroy', $todo->id], 'method'=>'POST', 'class'=>'float-right']) !!}
-    {{ Form::hidden('_method', 'delete') }}
+{!! Form::open(['action' => ['TodosController@destroy', $todo->id], 'method'=>'POST', 'class'=>'float-right', 'onsubmit'=>'return confirm("Are you sure?")']) !!}
+    {{ Form::hidden('_method', 'DELETE') }}
     {{ Form::bsSubmit('Delete', ['class'=>'btn btn-danger']) }}
 {!! Form::close() !!}
 ```
