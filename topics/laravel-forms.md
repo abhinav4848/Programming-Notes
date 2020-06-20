@@ -55,6 +55,11 @@ Check this [documentation](https://laravel.com/docs/4.2/html#opening-a-form).
     ```php
     {!! Form::open(['action' => 'PostsController@store', 'method'=>'POST']) !!}
     ```
+    but specify a route in web.php if you aren't using '--resource'
+    ```php
+    Route::post('/posts/store', 'PostsController@store');
+    ```
+    If you change the above '/posts/store', then destination also changes accordingly
 
 Now go to function `store()` in the controller, and add validation and save:
 ```php
@@ -295,6 +300,7 @@ if ($request->hasFile('gallery')) {
     Form::component('bsTextarea', 'components.form.textarea', ['name', 'value' => null, 'attributes' => []]);
     Form::component('hidden', 'components.form.hidden', ['name', 'value' => null, 'attributes' => []]);
     Form::component('bsSubmit', 'components.form.submit', ['value' => 'Submit', 'attributes' => []]);
+    Form::component('file', 'components.form.file', ['name', 'attributes'=>[]]);
     ```
 
 1. Then include the service provider in `config\app.php` as `App\Providers\FormServiceProvider::class,` otherwise the `bsText` variable will not be found.
@@ -318,6 +324,12 @@ if ($request->hasFile('gallery')) {
     * For `input type="hidden"`, make new file and put
         ```php
         {{ Form::hidden($name, $value, $attributes) }}
+        ```
+    * For file,
+        ```php
+        <div>
+            {{ Form::file($name) }}
+        </div>
         ```
 
 1. Now just go to your desired form view and put calling code: 

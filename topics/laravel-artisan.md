@@ -4,8 +4,9 @@ its'a a CLI. You can use `php artisan`-
 php artisan list # all options that come with artisan
 php artisan help migrate
 php artisan migrate
-php artisan make:controller PostsController
+php artisan make:controller PostsController  --resource # for bonus crud functionality
 php artisan make:model Post -m # to make a migration file for it as well. Keep it singular
+php artisan make:model Post -mc # migration and controller Convention is to keep the model singular and rest 2 plural
 php artisan make:migration name_of_migration -table=posts
 php artisan migrate # to run the migration
 php artisan tinker # Edit database in CLI directly

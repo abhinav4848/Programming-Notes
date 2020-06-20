@@ -15,13 +15,13 @@ laravel new blog
 
 will create a folder named blog with Laravel and dependencies already installed. 
 
-Alternatively, you may also install Laravel by issuing the Composer create-project command in your terminal:
+Alternatively, you may also install Laravel by issuing the Composer create-project command in your terminal (both methods will install the latest version):
 
 ```bash
 composer create-project --prefer-dist laravel/laravel project-name
 ```
 
-Composer method will do two extra things that laravel method won't. These are executed because of scripts in composer.json
+**Composer** method will do two extra things that laravel method won't. These are executed because of scripts in composer.json
 1. `cp .env.example .env`
 2. `./artisan key:generate`
 
