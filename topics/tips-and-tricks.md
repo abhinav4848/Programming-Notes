@@ -1,17 +1,17 @@
 ## Download
-Bash:
+Bash/Linux:
 ```bash
 youtube-dl -f bestaudio  "https://www.youtube.com/playlist?list=PLYRruMbyFRcBVdVN8v4FNkIKkXvL-bZn_" --exec "ffmpeg -i {}  -codec:a libmp3lame -qscale:a 0 {}.mp3 && rm {} "
 ```
 
-Windows audio: 
+Windows audio only: 
 ```bash
 youtube-dl -f bestaudio  "https://www.youtube.com/watch?v=zgOTgPrd2kU" --exec "ffmpeg -i {}  -codec:a libmp3lame -qscale:a 0 {}.mp3 && del {} "
 ```
 
-Windows video:
+Windows audio+video:
 ```bash
-youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' https://www.youtube.com/watch?v=OVEGs6_m2C0
+youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' https://www.youtube.com/watch?v=sLgEVkIkkQ8
 ```
 
 FFMPEG pure:
@@ -79,3 +79,17 @@ $ wget \
 
 # Links for piracy
 https://github.com/Igglybuff/awesome-piracy
+
+# Watch YouTube faster
+Enter this in console:
+```js
+document.getElementsByTagName("video")[0].playbackRate = 2.5;
+```
+
+# VsCode
+* **Open a folder**: Open cmd in the folder and type `code .`
+* **Open a file in code**: Type in cmd `code whatever.htm`
+* **Open a file in project by name**: Ctrl+P
+* **Go to prev/next file**: Left alt + left/right arrow keys
+* **Move lines up/down**: Left alt + up/down keys
+
