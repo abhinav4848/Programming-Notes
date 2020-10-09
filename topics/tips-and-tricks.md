@@ -11,7 +11,7 @@ youtube-dl -f bestaudio  "https://www.youtube.com/watch?v=zgOTgPrd2kU" --exec "f
 
 Windows audio+video:
 ```bash
-youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' https://www.youtube.com/watch?v=sLgEVkIkkQ8
+youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' https://www.youtube.com/watch?v=qbvgfEaC6GM
 ```
 
 FFMPEG pure:
@@ -92,4 +92,21 @@ document.getElementsByTagName("video")[0].playbackRate = 2.5;
 * **Open a file in project by name**: Ctrl+P
 * **Go to prev/next file**: Left alt + left/right arrow keys
 * **Move lines up/down**: Left alt + up/down keys
+
+# Google Search Operators
+```
+"exact query"
+website.com: query
+query 2017..2018
+query ..2017 (so only 2017)
+filetype:pdf query
+query -excludedTerm
+link:nytimes.com (to find pages that link here)
+“Come * right now * me” (* is a wildcard placeholder that google will fill)
+related:amazon.com
+chocolate OR white chocolate
+```
+
+# Twitter advanced Search
+https://twitter.com/search-advanced
 

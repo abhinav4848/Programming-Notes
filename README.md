@@ -61,9 +61,6 @@
 # Software Engineering
 -   [Concepts](./topics/software-engineering-concepts.md)
 
-# Web Helpers
--   [Site Tricks](./topics/site-tricks.md)
-
 # Misc
 -   [Mediawiki](./topics/mediawiki.md)
 -   [Excel](./topics/ms-excel.md)
