@@ -1,26 +1,30 @@
 ## Download
-Bash/Linux:
+**Bash/Linux:**
 ```bash
 youtube-dl -f bestaudio  "https://www.youtube.com/playlist?list=PLYRruMbyFRcBVdVN8v4FNkIKkXvL-bZn_" --exec "ffmpeg -i {}  -codec:a libmp3lame -qscale:a 0 {}.mp3 && rm {} "
 ```
 
-Windows audio only: 
+**Windows audio only:**
 ```bash
 youtube-dl -f bestaudio  "https://www.youtube.com/watch?v=zgOTgPrd2kU" --exec "ffmpeg -i {}  -codec:a libmp3lame -qscale:a 0 {}.mp3 && del {} "
 ```
 
-Windows audio+video:
+**Windows audio+video:**
 ```bash
 youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' https://www.youtube.com/watch?v=qbvgfEaC6GM
 ```
+Change `ext=mp4` to webm if you want to push for 8k video. `m4a` is the best audio available. `mp4` after that is the final format to merge the two files and save in. Still, Higher res files will be saved as mkv if necessary.
 
-FFMPEG pure:
+**FFMPEG pure:**
 ```bash
 ffmpeg -i input.mkv -c copy output.m4v
 ```
 
+### Update Youtube-dl
+```pip3 install --upgrade youtube-dl```
+
 ## Reddit
-Search reddit for exact stuff:
+**Search reddit for exact stuff:**
 
 https://camas.github.io/reddit-search/#%7B%22subreddit%22:%22India%22,%22resultSize%22:1000,%22query%22:%22Jain%22%7D
 
@@ -48,6 +52,11 @@ Write html files for all subreddits to r: `./write_html.py`
 
 ### Download images from links inside html files in the folder
 https://github.com/ruanchaves/reddit-html-archiver-image-plugin
+
+# Twitter advanced Search
+Search twitter for advanced stuff:
+
+https://twitter.com/search-advanced
 
 ## wget
 ```bash
@@ -106,7 +115,4 @@ link:nytimes.com (to find pages that link here)
 related:amazon.com
 chocolate OR white chocolate
 ```
-
-# Twitter advanced Search
-https://twitter.com/search-advanced
 
