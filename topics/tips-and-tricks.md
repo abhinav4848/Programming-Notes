@@ -1,4 +1,4 @@
-## Download
+## Download Vids via Youtube-dl
 **Bash/Linux:**
 ```bash
 youtube-dl -f bestaudio  "https://www.youtube.com/playlist?list=PLYRruMbyFRcBVdVN8v4FNkIKkXvL-bZn_" --exec "ffmpeg -i {}  -codec:a libmp3lame -qscale:a 0 {}.mp3 && rm {} "
@@ -14,6 +14,40 @@ youtube-dl -f bestaudio  "https://www.youtube.com/watch?v=zgOTgPrd2kU" --exec "f
 youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' https://www.youtube.com/watch?v=qbvgfEaC6GM
 ```
 Change `ext=mp4` to webm if you want to push for 8k video. `m4a` is the best audio available. `mp4` after that is the final format to merge the two files and save in. Still, Higher res files will be saved as mkv if necessary.
+
+
+***More complex youtube-dl***
+
+```
+youtube-dl -ciw --add-metadata --download-archive doneVids.txt -o '%(title)s-%(id)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' 9OYxETIV8bM
+```
+
+Explanation:
+```
+youtube-dl
+-ciw
+	-c, --continue  [Force resume of partially downloaded files]
+	-i, --ignore-errors [Continue on download errors, for example to skip unavailable videos in a playlist]
+	-w, --no-overwrites  [Do not overwrite files]
+
+--write-description 
+--write-annotations 
+--write-thumbnail 
+
+--download-archive done.txt
+	writes a text file with the video id so that it's not redownloaded again
+
+-o 
+	Output file name
+		'UpID-%(uploader_id)s 
+		Date-%(upload_date)s 
+		Title-%(title)s 
+		ID-%(id)s.%(ext)s' 
+
+-f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 
+
+Video ID: 9OYxETIV8bM
+```
 
 **FFMPEG pure:**
 ```bash
