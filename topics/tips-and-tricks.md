@@ -129,6 +129,20 @@ Enter this in console:
 document.getElementsByTagName("video")[0].playbackRate = 2.5;
 ```
 
+# Get access to a video file's url in a website using xpath
+Find the url once by inspect element. Then copy the full xpath of that element.
+Open console and enter:
+```js
+function getElementByXpath(path) {
+  return document.evaluate(path, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+}
+```
+then enter
+```js
+console.log( getElementByXpath("//html[1]/body[1]/div[1]") );
+```
+[source](https://stackoverflow.com/a/14284815/2365231)
+
 # VsCode
 * **Open a folder**: Open cmd in the folder and type `code .`
 * **Open a file in code**: Type in cmd `code whatever.htm`
