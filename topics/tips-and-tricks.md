@@ -48,6 +48,10 @@ youtube-dl
 Video ID: 9OYxETIV8bM
 ```
 
+**Note on proxies:**
+You can use a vpn to bypass blocked sites in your country. EG: With nordvpn, they offer a socks5 proxy. you can use youtube-dl with socks5 proxy; add
+`--proxy socks5://username:password@server:port` or if free proxy, `--proxy socks5://161.35.70.249:1080`
+
 **FFMPEG pure:**
 ```bash
 ffmpeg -i input.mkv -c copy output.m4v
