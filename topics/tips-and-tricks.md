@@ -13,8 +13,7 @@ youtube-dl -f bestaudio  "https://www.youtube.com/watch?v=zgOTgPrd2kU" --exec "f
 ```bash
 youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' https://www.youtube.com/watch?v=dPuzkFfAESI
 ```
-Change `ext=mp4` to webm if you want to push for 8k video. `m4a` is the best audio available. `mp4` after that is the final format to merge the two files and save in. Still, Higher res files will be saved as mkv if necessary.
-
+Change `ext=mp4` to `webm` if you want to push for 8k video (just do -F to check for all file sizes first). `m4a` is the best audio available. `mp4` after that is the final format to merge the two files and save in. Still, Higher res files will be saved as mkv if necessary as mp4 has some limitations I guess.
 
 ***More complex youtube-dl***
 
