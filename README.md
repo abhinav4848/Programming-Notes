@@ -40,6 +40,7 @@
 -   [Python Imports (ext link)](https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html)
 -   [Venv](./topics/venv.md)
 -   [My Python Notes (ext link)](https://github.com/abhinav4848/Python)
+-   My Favs: [Corey Schafer](https://www.youtube.com/c/Coreyms/playlists), [Sentdex](https://www.youtube.com/c/sentdex/playlists)
 
 # Website Management
 -   [Set up Apache virtualhost](./topics/apache-virtualhost.md)
