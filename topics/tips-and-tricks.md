@@ -20,6 +20,10 @@ Change `ext=mp4` to `webm` if you want to push for 8k video (just do -F to check
 ```
 youtube-dl -ciw --add-metadata --download-archive doneVids.txt -o '%(title)s-%(id)s.%(ext)s' -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' 9OYxETIV8bM
 ```
+or With folder mode and that video's related files
+```
+youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' https://www.youtube.com/channel/UCIvf5vhIMBT3HEES4N47_iw -ciw --add-metadata --write-description --write-info-json --write-thumbnail --write-all-thumbnails --write-sub --download-archive doneVids.txt -o "Honest_Guide.%(upload_date)s.%(title)s/%(title)s-%(id)s.%(ext)s"
+```
 
 Explanation:
 ```
@@ -31,7 +35,9 @@ youtube-dl
 
 --write-description 
 --write-annotations 
---write-thumbnail 
+--write-thumbnail
+--write-info-json 
+--write-sub 
 
 --download-archive done.txt
 	writes a text file with the video id so that it's not redownloaded again
